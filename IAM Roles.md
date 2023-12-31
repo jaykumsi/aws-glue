@@ -88,6 +88,60 @@ Read access to the source data (e.g., Amazon S3 buckets, databases, or other dat
 Write access to the target data (e.g., Amazon S3, Amazon Redshift).
 Permissions to access necessary AWS Glue resources.
 Execution permissions for AWS Glue ETL jobs.
+```sql
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "glue:StartJobRun",
+                "glue:GetJobRun",
+                "glue:GetJobRuns",
+                "glue:GetJobs",
+                "glue:BatchStopJobRun",
+                "glue:UpdateJob",
+                "glue:GetJob",
+                "glue:CreateJob",
+                "glue:DeleteJob",
+                "glue:BatchDeleteJob",
+                "glue:GetUserDefinedFunction",
+                "glue:GetUserDefinedFunctions"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::your-source-bucket",
+                "arn:aws:s3:::your-source-bucket/*",
+                "arn:aws:s3:::your-target-bucket",
+                "arn:aws:s3:::your-target-bucket/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:region:account-id:log-group:/aws/glue/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "cloudwatch:PutMetricData",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 
 ## AWS Glue Crawling Role:
 
