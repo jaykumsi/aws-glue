@@ -1,3 +1,4 @@
+Introduction :
 ```sql
 
 AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for you to prepare and load your data for analysis. It is part of the Amazon Web Services (AWS) cloud computing platform and is designed to simplify the process of moving, transforming, and cleaning your data.
