@@ -11,3 +11,6 @@
     * FTP / SFTP File Server
     * Web service
   * RDS   
+* Visual ETL
+* PySpark
+* AWS CLI
