@@ -4,6 +4,81 @@ When working with AWS Glue, you will need Identity and Access Management (IAM) r
 
 This role is used by individuals who access the AWS Glue Console.
 Permissions might include AWSGlueConsoleFullAccess to allow users to manage AWS Glue resources through the AWS Management Console.
+```sql
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "glue:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": [
+                "arn:aws:s3:::your-source-bucket",
+                "arn:aws:s3:::your-target-bucket"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::your-source-bucket/*",
+                "arn:aws:s3:::your-target-bucket/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": "glue.amazonaws.com"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:PutMetricData",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:region:account-id:log-group:/aws/glue/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:region:account-id:log-group:/aws/glue/*:log-stream:*"
+        }
+    ]
+}
+```
+
 
 ## AWS Glue ETL Job Role:
 
