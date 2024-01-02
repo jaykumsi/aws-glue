@@ -1,7 +1,7 @@
 # AWS Glue
 > Jay Kumsi
 
-[Glue Introduction](< a href="[https://github.com/" target="_blank](https://github.com/jaykumsi/aws-glue/edit/main/Intro.md)">Glue Introduction</a>)
+[Glue Introduction](https://github.com/jaykumsi/aws-glue/edit/main/Intro.md)
 
 * Glue Introduction
 * IAM Roles for Glue
