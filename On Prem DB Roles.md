@@ -77,7 +77,7 @@
          USE YourDatabase;
          GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.YourTable TO db_admins;
         
-   5.  Add User to Role:
+    5.  Add User to Role:
       *  Add the user to the database role.
         USE YourDatabase;
         ALTER ROLE db_admins ADD MEMBER [YourUser];
