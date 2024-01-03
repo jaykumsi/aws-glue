@@ -79,6 +79,34 @@ Permissions might include AWSGlueConsoleFullAccess to allow users to manage AWS 
 }
 ```
 
+## S3 IAM Role
+
+IAM roles in the context of Amazon S3 (Simple Storage Service) are used to define and manage permissions for entities such as EC2 instances, Lambda functions, or other AWS services to interact with S3 buckets securely. Below, I'll provide an overview of how you can create IAM roles specifically for S3:
+
+Example 1: Granting EC2 Instances Access to an S3 Bucket
+Create an IAM Role:
+
+Use the IAM console, AWS CLI, or SDKs to create an IAM role.
+Define the trusted entity as EC2.
+Attach S3 Policy:
+
+Attach an S3 policy to the IAM role to define the permissions. For read-only access, you can use a policy like:
+
+![image](https://github.com/jaykumsi/aws-glue/assets/137452836/07dcde37-5b77-4b5c-abdd-d8afb1f7ac39)
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+{
+ "Effect": "Allow",
+ "Action": "s3:GetObject",
+ "Resource": "arn:aws:s3:::your-bucket-name/*"
+}
+]
+}
+
+
+
 
 ## AWS Glue ETL Job Role:
 
