@@ -61,32 +61,25 @@
   
     1. Create a SQL Server Login:
        * Create a SQL Server login for the user or group that needs access to the SQL Server instance. This can be a Windows user or group if using Windows Authentication.
-      ```sql
           CREATE LOGIN [YourDomain\YourUser] FROM WINDOWS;
-    ```
+    
     2. Create a Database User:
       *  Create a user within the specific database and map it to the SQL Server login.
-      ```sql
           USE YourDatabase;
           CREATE USER [YourUser] FOR LOGIN [YourDomain\YourUser];
-    ```
+     
     3.  Create a Database Role:
       *  Create a database role for database administrators.
-    ``` sql
-        USE YourDatabase;
-        CREATE ROLE db_admins;
-  ```
+          USE YourDatabase;
+          CREATE ROLE db_admins;
     4. Assign Permissions:
       *  Grant necessary permissions to the database role.
-    ``` sql
-     USE YourDatabase;
-     GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.YourTable TO db_admins;
-    ```
-
+         USE YourDatabase;
+         GRANT SELECT, INSERT, UPDATE, DELETE ON dbo.YourTable TO db_admins;
+        
    5.  Add User to Role:
       *  Add the user to the database role.
-    ```sql
-      USE YourDatabase;
-      ALTER ROLE db_admins ADD MEMBER [YourUser];
-  '''
+        USE YourDatabase;
+        ALTER ROLE db_admins ADD MEMBER [YourUser];
+    
 This is a simplified example, and the exact steps may vary based on your specific requirements and SQL Server version. Always refer to the official Microsoft SQL Server documentation for detailed instructions and best practices for securing your SQL Server on-premises environment.
