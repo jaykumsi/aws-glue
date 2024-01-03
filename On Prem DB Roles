@@ -1,4 +1,4 @@
-## Oracle DB
+# Oracle DB
 
   Oracle on-premises solutions, such as Oracle Database, do not have a built-in IAM (Identity and Access Management) system similar to cloud services like Oracle Cloud Infrastructure (OCI). However, Oracle provides solutions for on-premises IAM through its Oracle Identity and Access Management (IAM) Suite.
   
@@ -42,7 +42,7 @@
   
         Remember that the specifics of role creation, policy definition, and integration may vary based on the versions of Oracle IAM Suite components you are using. Always refer to the official documentation for the version you have installed for detailed instructions.
 
-## Microsoft SQL Server
+# Microsoft SQL Server
   Microsoft SQL Server on-premises does not have a built-in Identity and Access Management (IAM) system like cloud services. Instead, it relies on the Windows operating system security and Microsoft SQL Server's own security features for user authentication and authorization.
   
   Here are the key components and concepts related to security and access management in Microsoft SQL Server on-premises:
