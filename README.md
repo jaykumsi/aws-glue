@@ -1,7 +1,7 @@
 # AWS Glue
 > Jay Kumsi
 
-* [Glue Introduction](https://github.com/jaykumsi/aws-glue/edit/main/Intro.md)
+* [Glue Introduction]([https://github.com/jaykumsi/aws-glue/edit/main/Intro.md](https://github.com/jaykumsi/aws-glue/blob/main/Intro.md))
 * IAM Roles for Glue
   * [User Permissions](https://github.com/jaykumsi/aws-glue/blob/main/User%20Permissions.md)
   * [S3 IAM Roles](https://github.com/jaykumsi/aws-glue/blob/main/S3%20IAM%20Roles)
