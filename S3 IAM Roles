@@ -1,4 +1,4 @@
-## S3 IAM Role
+##S3 IAM Role
 
 IAM roles in the context of Amazon S3 (Simple Storage Service) are used to define and manage permissions for entities such as EC2 instances, Lambda functions, or other AWS services to interact with S3 buckets securely. Below, I'll provide an overview of how you can create IAM roles specifically for S3:
 
