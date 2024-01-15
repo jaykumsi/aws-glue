@@ -25,7 +25,7 @@ Example 1: Granting EC2 Instances Access to an S3 Bucket
     ]
 }
 
-      * Replace "your-bucket-name" with the actual name of your S3 bucket.
+      * Replace "your-bucket-name" with the "arn:aws:s3:::tini-d-gluebucket-001*" S3 bucket.
 
 3. Launch EC2 Instance with IAM Role:
      * When launching an EC2 instance, specify the IAM role you created.
