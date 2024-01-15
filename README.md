@@ -2,7 +2,7 @@
 > Jay Kumsi
 
 ## Glue Topics
-* Intro[https://github.com/jaykumsi/aws-glue/blob/main/Intro.md]
+* [Intro](https://github.com/jaykumsi/aws-glue/blob/main/Intro.md)
 * What IAM Roles are needed
 * [Crawler](AWS-GLUE-Crawler.md).
    * Source
