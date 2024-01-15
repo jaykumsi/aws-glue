@@ -13,14 +13,17 @@ Example 1: Granting EC2 Instances Access to an S3 Bucket
 ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/07dcde37-5b77-4b5c-abdd-d8afb1f7ac39)
 
 {
-  "Version": "2012-10-17",
-  "Statement": [
-{
- "Effect": "Allow",
- "Action": "s3:GetObject",
- "Resource": "arn:aws:s3:::your-bucket-name/*"
-}
-]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::tini-d-gluebucket-001*"
+        }
+    ]
 }
 
       * Replace "your-bucket-name" with the actual name of your S3 bucket.
