@@ -43,20 +43,20 @@ Example 2: Granting Lambda Function Access to an S3 Bucket
 ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/5cec80c3-319b-41dd-82f7-7814ec74bd96)
 
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-     "s3:GetObject",
-       "s3:PutObject"
-   ],
-      "Resource": "arn:aws:s3:::your-bucket-name/*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::tini-d-gluebucket-001*"
+        }
+    ]
 }
 
-   * Replace "your-bucket-name" with the actual name of your S3 bucket.
+   * Replace "your-bucket-name" with the "arn:aws:s3:::tini-d-gluebucket-001*" S3 bucket.
 
 3. Specify IAM Role in Lambda Configuration:
     * When creating or updating your Lambda function, specify the IAM role you created.
