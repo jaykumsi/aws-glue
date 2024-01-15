@@ -18,8 +18,7 @@ Example 1: Granting EC2 Instances Access to an S3 Bucket
         {
             "Effect": "Allow",
             "Action": [
-                          "s3:GetObject",
-                          "s3:PutObject"
+                          "s3:GetObject"
             ],
             "Resource": "arn:aws:s3:::tini-d-gluebucket-001*"
         }
