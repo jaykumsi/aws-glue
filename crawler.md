@@ -1,4 +1,4 @@
-## Glue Crawler
+![image](https://github.com/jaykumsi/aws-glue/assets/137452836/40a168cf-0ee9-4a28-9290-6db8e2069f78)## Glue Crawler
   * A Program that connects to your data source (S3 ,DyDB) to scan your data and creates metadata tables in Glue Data Catalog
   * Can scan multuple data sources in single run
   * Once completed,it will create table in Data catalog
@@ -146,11 +146,50 @@
 ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/62b34068-661e-4410-a4cf-f4bdcaa9c367)
 
 
+
 ## Create a Crawler to move the data from the S3 bucket to the Glue Data Catalog.
-   * Go to AWS Glue, click the crawlers tab on the left side of the page 
 
-  ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/25bcb78c-6a23-4ab5-9f12-b1755b4b91fa)
+   * Go to AWS Glue, click the crawlers tab on the left side of the page ,click create crawler.
+
+   ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/17221c31-3b79-4ef0-a6c0-d77f182787ae)
+
+   * Set Crawler properties , Enter the unique crawler name  and click Next
+     
+![image](https://github.com/jaykumsi/aws-glue/assets/137452836/4e6906a7-b982-4bd1-ac78-a5f222a2a3cd)
+
+   * Choose the Data sources,click on Add a data source
+     
+     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/1b5e4962-ad08-4890-a2be-7fa5b62082f2)
+
+   * Choose the data source to be S3,Network Connection -Optional, and give the S3 bucket path in S3 path and Click Next
+
+     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/58b00314-9d8e-4035-9ccd-b78d2a9a870a)
+
+   * Configure Security Setting, We already created the IAM role, use that and click Next.
+
+     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/3cc6ba17-8ae8-4869-a587-12e038c03195)
+
+   *  Set Output and Scheduling, for Target Database, select the database which is created or click Add Database
+     
+     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/cd541952-1e5c-4793-a211-e6b5d1dd812a)
+
+   * Crawler Schedule, you can select the crawler schedule on how to run it, below you can choose anyone.
+     
+       ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/cf25233d-a92d-4fa6-91d1-82d5626ff9cf)
+
+   * Once you select scheduler, then click next and review the full setting before clicking finish. It will create a crawler to move the data from S3 to Data 	 
+     Catalog
+
+   * Once the Crawler is created, please select Run Crawler and once it is completed it will display as below.
+
+     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/78a416e1-8b61-48cc-a845-12f97e167986)
+
+     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/3fa2ddbc-6a7e-4462-9e3f-eb10ec8d8515)
 
 
+
+
+
+ 
 
 	
