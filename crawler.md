@@ -30,7 +30,7 @@
        ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/3780f819-8178-4564-8922-63265ee1da0f)
   * click the Create policy
      ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/d8efa108-87f2-4b2f-bb39-883eb53e857e)
-  * Permissions : click on Json tab and paste the below code and click Next
+  * Permissions : click on Json tab and paste the below code and Click Next
         {
     "Version": "2012-10-17",
     "Statement": [
@@ -46,7 +46,7 @@
         }
      ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/6960191b-34db-4b9c-ac47-f9a2afcf8aeb)
 
-  * Policy Name : Enter a Policy Name accordingly and click next will create a policy
+  * Policy Name : Enter a Policy Name accordingly and click next will Create a policy
       ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/cee137a5-cf1c-4d3f-836c-0eaf1c5e44ab)
 
 # Create read/write glue service role
@@ -54,7 +54,7 @@
        ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/3780f819-8178-4564-8922-63265ee1da0f)
   * click the Create policy
      ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/d8efa108-87f2-4b2f-bb39-883eb53e857e)
-  * Permissions : click on Json tab and paste the below code and click Next
+  * Permissions : click on Json tab and paste the below code and Click Next
 
 {
 	"Version": "2012-10-17",
@@ -111,5 +111,5 @@
 	]
 }
      ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/88d6e300-5b28-4c94-9dab-280905d1fc21)
- * Policy Name : Enter a Policy Name accordingly and click next will #create a policy
+ * Policy Name: Enter a Policy Name accordingly and click next will Create a policy
       ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/cee137a5-cf1c-4d3f-836c-0eaf1c5e44ab)    
