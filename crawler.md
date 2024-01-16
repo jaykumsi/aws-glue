@@ -10,7 +10,7 @@
   * Native client
     * S3:
     * Dynamo DB:
-  # JDBC 
+  * JDBC 
       * Amazon Redshift
       * Snowflake
       * Amazon Aurora
@@ -19,7 +19,7 @@
       * MySQL
       * Oracle
       * PostgreSQL
-  # MangoDB client 
+  * MangoDB client 
       * Mongo DB
       * MongoDB Atlas
       * Amazon DocumentDB
