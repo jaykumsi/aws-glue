@@ -4,9 +4,7 @@
 ## Glue Topics
 * [Intro](https://github.com/jaykumsi/aws-glue/blob/main/Intro.md)
 * [IAM Roles]
-* [Crawler](AWS-GLUE-Crawler.md).
-   * Source
-   * Target
+* [Crawler](https://github.com/jaykumsi/aws-glue/blob/main/crawler.md)
 * Glue with PySpark
     * Source S3 (CSV,Parquet,JSON,AWS ION) - Target(S3,RDBMS,DynamoDB)
         * IAM roles needed
