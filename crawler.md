@@ -113,3 +113,17 @@
      ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/88d6e300-5b28-4c94-9dab-280905d1fc21)
  * Policy Name: Enter a Policy Name accordingly and click next will Create a policy
       ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/cee137a5-cf1c-4d3f-836c-0eaf1c5e44ab)    
+# Next, Create Crawler Roles for the policies created
+    * ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/b19ba65d-08e3-4310-b3b7-3d9cee24f545)
+
+    * Next, select the trusted entity as below image, for trusted entity type, select AWS service and for the service or use case,select Glue and Click Next.
+
+    * Add Permissions , select the policies created above and Click Next
+    	![image](https://github.com/jaykumsi/aws-glue/assets/137452836/c52b6e04-0079-4e6c-a9ca-12ed415067de)
+    *  Role Name : Enter the role name accordingly and click Next will create a Role.
+    	![image](https://github.com/jaykumsi/aws-glue/assets/137452836/62b34068-661e-4410-a4cf-f4bdcaa9c367)
+
+
+
+
+	
