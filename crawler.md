@@ -135,7 +135,8 @@
   ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/b19ba65d-08e3-4310-b3b7-3d9cee24f545)
 
     * Next, select the trusted entity as below image, for trusted entity type, select AWS service and for the service or use case,select Glue and Click Next.
-
+	![image](https://github.com/jaykumsi/aws-glue/assets/137452836/40a168cf-0ee9-4a28-9290-6db8e2069f78)
+ 
     * Add Permissions , select the policies created above and Click Next
     
      	
