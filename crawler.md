@@ -1,4 +1,4 @@
-![image](https://github.com/jaykumsi/aws-glue/assets/137452836/40a168cf-0ee9-4a28-9290-6db8e2069f78)## Glue Crawler
+## Glue Crawler
   * A Program that connects to your data source (S3 ,DyDB) to scan your data and creates metadata tables in Glue Data Catalog
   * Can scan multuple data sources in single run
   * Once completed,it will create table in Data catalog
