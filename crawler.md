@@ -146,6 +146,11 @@
 ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/62b34068-661e-4410-a4cf-f4bdcaa9c367)
 
 
+## Create a Crawler to move the data from the S3 bucket to the Glue Data Catalog.
+   * Go to AWS Glue, click the crawlers tab on the left side of the page 
+
+  ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/25bcb78c-6a23-4ab5-9f12-b1755b4b91fa)
+
 
 
 	
