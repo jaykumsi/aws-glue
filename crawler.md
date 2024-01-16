@@ -111,5 +111,5 @@
 	]
 }
      ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/88d6e300-5b28-4c94-9dab-280905d1fc21)
- * Policy Name : Enter a Policy Name accordingly and click next will ##create a policy
+ * Policy Name : Enter a Policy Name accordingly and click next will #create a policy
       ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/cee137a5-cf1c-4d3f-836c-0eaf1c5e44ab)    
