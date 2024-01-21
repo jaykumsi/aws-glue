@@ -268,9 +268,17 @@
 		       The header row must be sufficiently different from the data rows. To determine this, one or more of the rows must parse as other than 			       STRING type. If all columns are of type STRING, then the first row of data is not sufficiently different from subsequent rows to be used as 		       the header.
 
      * Below are the steps to create a classifier
-          
+          * Go to the AWS Glue Console, Click on Crawler on the left tab, then click on create crawler as specfied below.
+            
 	    ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/4ff73b46-7650-48b5-b4f6-d92a3acbfbf8)
 
+          * Set Crawler Properties, Name the crawler accordingly and click next.
+             ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/2d640f91-5927-4876-b0bb-74bde1052da7)
+          
+	  * Choose the data sources and classifiers,we are creating new data source ,so click Not Yet
+     	     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/8650c110-6918-451a-bd65-ceb31aae94ea)
+	  
+          * 
      
 
 	
