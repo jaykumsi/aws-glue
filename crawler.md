@@ -224,8 +224,7 @@
 	Type: XMLClassifier object
   
   # When to use Classifier
-  
-   * You use classifiers when you crawl a data store to define metadata tables in the AWS Glue Data Catalog. You can set up your crawler with an ordered set of 
+  *  You use classifiers when you crawl a data store to define metadata tables in the AWS Glue Data Catalog. You can set up your crawler with an ordered set of 
      classifiers. When the crawler invokes a classifier, the classifier determines whether the data is recognized. If the classifier can't recognize the data or 
      is not 100 percent certain, the crawler invokes the next classifier in the list to determine whether it can recognize the data.
 
@@ -267,5 +266,11 @@
 
 		       Every column in a potential header must meet the AWS Glue regex requirements for a column name.
 		       The header row must be sufficiently different from the data rows. To determine this, one or more of the rows must parse as other than 			       STRING type. If all columns are of type STRING, then the first row of data is not sufficiently different from subsequent rows to be used as 		       the header.
+
+     * Below are the steps to create a classifier
+          
+	    ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/4ff73b46-7650-48b5-b4f6-d92a3acbfbf8)
+
+     
 
 	
