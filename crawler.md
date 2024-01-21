@@ -268,17 +268,22 @@
 		       The header row must be sufficiently different from the data rows. To determine this, one or more of the rows must parse as other than 			       STRING type. If all columns are of type STRING, then the first row of data is not sufficiently different from subsequent rows to be used as 		       the header.
 
      * Below are the steps to create a classifier
-          * Go to the AWS Glue Console, Click on Crawler on the left tab, then click on create crawler as specfied below.
-            
-	    ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/4ff73b46-7650-48b5-b4f6-d92a3acbfbf8)
+          * Go to the AWS Glue Console, Click on Classifier on the left tab, then click on create crawler as specfied below.
+             
+	     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/28452ef9-c90b-4acf-ad17-eee8e85cbf6e)
 
-          * Set Crawler Properties, Name the crawler accordingly and click next.
-             ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/2d640f91-5927-4876-b0bb-74bde1052da7)
-          
-	  * Choose the data sources and classifiers,we are creating new data source ,so click Not Yet
-     	     ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/8650c110-6918-451a-bd65-ceb31aae94ea)
-	  
-          * 
+          * Create Crawler, Enter classifier name accordlingly,for classifier type and properties ,click CSV as shown in pic.
+
+            ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/3e073124-b9f6-4cf5-afa5-1e7d3478262e)
+
+	  * for column delimiter choose 'comma' ,for quote symbol choose 'double quote',for column heading choose 'has heading' ,ex: you have heading in the csv 	    file and click create.	      
+
+            ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/0bed014d-207c-47f7-abc3-11c5cf39e91a)
+
+         *  In Crawler setup, we need to use custom classifiers ,choose the classifier we created above and follow the same steps for the crawler.
+
+             ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/7bb61118-bfd5-425d-90c0-ce324968f18a)
+
      
 
 	
