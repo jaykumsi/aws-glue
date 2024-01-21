@@ -189,7 +189,83 @@
 
 
 
+  ## Classifier
 
- 
+   * A classifier reads the data in a data store. If it recognizes the format of the data, it generates a schema. The classifier also returns a certainty number 
+     to indicate how certain the format recognition was.
+   * AWS Glue provides a set of built-in classifiers, but you can also create custom classifiers. AWS Glue invokes custom classifiers first, in the order that you 
+     specify in your crawler definition. Depending on the results that are returned from custom classifiers, AWS Glue might also invoke built-in classifiers. If a 
+     classifier returns certainty=1.0 during processing, it indicates that it's 100 percent certain that it can create the correct schema. AWS Glue then uses the 
+     output of that classifier.
+  
+   * If no classifier returns certainty=1.0, AWS Glue uses the output of the classifier that has the highest certainty. If no classifier returns a certainty 	 
+     greater than 0.0, AWS Glue returns the default classification string of UNKNOWN.
+
+   * Classifiers are triggered during a crawl task. A classifier checks whether a given file is in a format it can handle. If it is, the classifier creates a 
+     schema in the form of a StructType object that matches that data format.
+
+   * You can use the standard classifiers that AWS Glue provides, or you can write your own classifiers to best categorize your data sources and specify the 
+     appropriate schemas to use for them. A classifier can be a grok classifier, an XML classifier, a JSON classifier, or a custom CSV classifier, as specified in 
+     one of the fields in the Classifier object.
+
+  # Contents
+
+   * CsvClassifier
+	A classifier for comma-separated values (CSV).
+	Type: CsvClassifier object
+   * GrokClassifier
+	A classifier that uses grok.
+	Type: GrokClassifier object
+   * JsonClassifier
+	A classifier for JSON content.
+	Type: JsonClassifier object
+   * XMLClassifier
+	A classifier for XML content.
+	Type: XMLClassifier object
+  
+  # When to use Classifier
+  
+   * You use classifiers when you crawl a data store to define metadata tables in the AWS Glue Data Catalog. You can set up your crawler with an ordered set of 
+     classifiers. When the crawler invokes a classifier, the classifier determines whether the data is recognized. If the classifier can't recognize the data or 
+     is not 100 percent certain, the crawler invokes the next classifier in the list to determine whether it can recognize the data.
+
+  # Types of Classifier :
+  	* Custom classifiers
+        * Built-In classifers
+
+     * Custom classifier : 
+     			The output of a classifier includes a string that indicates the file's classification or format (for example, json) and the schema of the 			file. For custom classifiers, you define the logic for creating the schema based on the type of classifier. Classifier types include 				defining schemas based on grok patterns, XML tags, and JSON paths.
+			If you change a classifier definition, any data that was previously crawled using the classifier is not reclassified. A crawler keeps 				track of previously crawled data. New data is classified with the updated classifier, which might result in an updated schema. If the 				schema of your data has evolved, update the classifier to account for any schema changes when your crawler runs. To reclassify data to 				correct an incorrect classifier, create a new crawler with the updated classifier.
+     * Built-In classfier :
+                        AWS Glue provides built-in classifiers for various formats, including JSON, CSV, web logs, and many database systems.
+
+			If AWS Glue doesn't find a custom classifier that fits the input data format with 100 percent certainty, it invokes the built-in 				classifiers in the order shown in the following table. The built-in classifiers return a result to indicate whether the format matches 				(certainty=1.0) or does not match (certainty=0.0). The first classifier that has certainty=1.0 provides the classification string and 				schema for a metadata table in your Data Catalog.
+
+			Files in the following compressed formats can be classified:
+
+			  ZIP (supported for archives containing only a single file). Note that Zip is not well-supported in other services (because of the 					archive).
+			  BZIP
+			  GZIP
+			  LZ4
+			  Snappy (supported for both standard and Hadoop native Snappy formats)
+
+     * Built-in CSV classifier
+			The built-in CSV classifier parses CSV file contents to determine the schema for an AWS Glue table. This classifier checks for the 				following delimiters:
+
+			  Comma (,)
+			  Pipe (|)
+			  Tab (\t)
+			  Semicolon (;)
+			  Ctrl-A (\u0001)
+			  Ctrl-A is the Unicode control character for Start Of Heading.
+
+		       To be classified as CSV, the table schema must have at least two columns and two rows of data. The CSV classifier uses a number of 			       heuristics to determine whether a header is present in a given file. If the classifier can't determine a header from the first row of data, 		       column headers are displayed as col1, col2, col3, and so on. The built-in CSV classifier determines whether to infer a header by evaluating 
+                       the following characteristics of the file:
+
+		       Every column in a potential header parses as a STRING data type.
+		       Except for the last column, every column in a potential header has content that is fewer than 150 characters. To allow for a trailing 			       delimiter, the last column can be empty throughout the file.
+
+		       Every column in a potential header must meet the AWS Glue regex requirements for a column name.
+		       The header row must be sufficiently different from the data rows. To determine this, one or more of the rows must parse as other than 			       STRING type. If all columns are of type STRING, then the first row of data is not sufficiently different from subsequent rows to be used as 		       the header.
 
 	
