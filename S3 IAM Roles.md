@@ -11,7 +11,7 @@ Example 1: Granting EC2 Instances Access to an S3 Bucket
       * Attach an S3 policy to the IAM role to define the permissions. For read-only access, you can use a policy like:
 
 ![image](https://github.com/jaykumsi/aws-glue/assets/137452836/07dcde37-5b77-4b5c-abdd-d8afb1f7ac39)
-
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -24,7 +24,7 @@ Example 1: Granting EC2 Instances Access to an S3 Bucket
         }
     ]
 }
-
+```
       * Replace "your-bucket-name" with the "arn:aws:s3:::tini-d-gluebucket-001*" S3 bucket.
 
 3. Launch EC2 Instance with IAM Role:
